@@ -369,13 +369,13 @@ export default function ButtonOnlyTracingQuest() {
   // Student name (locked at Start)
   const [studentName, setStudentName] = useState<string>("");
   const [nameDraft, setNameDraft] = useState<string>("");
-  const [nameLocked, setNameLocked] = useState<boolean>(false);
+  /*const [nameLocked, setNameLocked] = useState<boolean>(false);
   function lockName() {
     const v = nameDraft.trim();
     if (!v) return;
     setStudentName(v);
     setNameLocked(true);
-  }
+  }*/
 
   // Positions + ref for playfield
   const [positions, setPositions] = useState<Array<{ topPct: number; leftPct: number }>>([]);
@@ -512,7 +512,7 @@ export default function ButtonOnlyTracingQuest() {
   function startGame() {
     if (!nameDraft.trim()) return;
     setStudentName(nameDraft.trim());
-    setNameLocked(true);
+    //setNameLocked(true);
     setShowIntro(false);
     restart(false); // ensure clean state without reopening intro
   }
